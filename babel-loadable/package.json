@@ -1,0 +1,23 @@
+{
+  "name": "@next/babel-plugin-loadable-manifest",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "build": "npm run build:babel",
+    "build:babel": "cross-env BUILD_TARGET=node BABEL_ENV=babel-plugin-build-test babel --root-mode upward -d lib --ignore \"**/*.test.js\" src"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/parser": "7.18.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "cross-env": "^7.0.3"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  }
+}
